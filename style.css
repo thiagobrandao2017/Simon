@@ -120,6 +120,23 @@ footer {
 }
 
 
+.click-bright-green {
+  background-color: #06F842;
+  border-color: #06F842;
+}
+.click-bright-red {
+  background-color: #FD1A1A;
+  border-color:  #FD1A1A;
+}
+.click-bright-blue {
+  background-color: #2828FF;
+  border-color: #2828FF;
+}
+.click-bright-yellow {
+  background-color: #FFFF0F;
+  border-color:#FFFF0F;
+}
+
 
 
 @media (max-width: 500px){

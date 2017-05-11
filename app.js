@@ -32,7 +32,35 @@ $(".red").hover(brightRed,backToRed);
 $(".blue").hover(brightBlue,backToBlue);
 $(".yellow").hover(brightYellow,backToYellow);
 
+
 //************************//
+
+//************************//
+//Click functionality
+//************************//
+$(".green").on("click",function(){
+  $(this).addClass('click-bright-green');
+  setTimeout(function(){
+    $(".green").removeClass('click-bright-green') }, 2000);
+});
+
+$(".red").on("click",function(){
+  $(this).addClass('click-bright-red');
+  setTimeout(function(){
+    $(".red").removeClass('click-bright-red') }, 2000);
+});
+
+$(".blue").on("click",function(){
+  $(this).addClass('click-bright-blue');
+  setTimeout(function(){
+    $(".blue").removeClass('click-bright-blue') }, 2000);
+});
+
+$(".yellow").on("click",function(){
+  $(this).addClass('click-bright-yellow');
+  setTimeout(function(){
+    $(".yellow").removeClass('click-bright-yellow') }, 2000);
+});
 
 //************************//
 
