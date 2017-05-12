@@ -11,33 +11,20 @@ $(document).ready(function(){
     compSequence.push(random);
     console.log(compSequence);
 
-    // var timeOut = function(i) {
-    //
-    //   setTimeout(function(){
-    //     $(`#${compSequence[i]}`).removeClass("click-bright-" + $(`#${compSequence[i]}`).attr("id"));
-    //   },1000);
-    // }
-
     var timeOut = function(i) {
-
       var circle = $(`#${compSequence[i]}`)
       circle.addClass("click-bright-" + circle.attr("id"));
-
-      setTimeout(function(){
-        $(`#${compSequence[i]}`).removeClass("click-bright-" + $(`#${compSequence[i]}`).attr("id"));
-        if (i < compSequence.length) {
-          timeOut(i + 1);
-        }
-      },2000);
+        setTimeout(function(){
+          var circle = $(`#${compSequence[i]}`)
+          circle.removeClass("click-bright-" + circle.attr("id"));
+          if (i < compSequence.length) {
+            timeOut(i + 1);
+          }
+      },850);
     }
 
-    timeOut(0);
 
-    // for (var i = 0; i < compSequence.length; i++) {
-    //   var circle = $(`#${compSequence[i]}`)
-    //   circle.addClass("click-bright-" + circle.attr("id"));
-    //   timeOut(i);
-    // }
+    timeOut(0);
  }
 
   var compare = function() {
@@ -49,7 +36,6 @@ $(document).ready(function(){
         return;
       }
     }
-
     setTimeout(function() {
       start();
     },1500)
@@ -78,4 +64,5 @@ $(document).ready(function(){
     userSequence = [];
     compSequence = [];
   });
+
 });
