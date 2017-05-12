@@ -11,19 +11,35 @@ $(document).ready(function(){
     compSequence.push(random);
     console.log(compSequence);
 
-    var timeOut = function(i) {
-      setTimeout(function(){
-        $(`#${compSequence[i]}`).removeClass("click-bright-" + $(`#${compSequence[i]}`).attr("id"));
-       },1000);
-    }
+    // var timeOut = function(i) {
+    //
+    //   setTimeout(function(){
+    //     $(`#${compSequence[i]}`).removeClass("click-bright-" + $(`#${compSequence[i]}`).attr("id"));
+    //   },1000);
+    // }
 
-    for (var i = 0; i < compSequence.length; i++) {
+    var timeOut = function(i) {
+
       var circle = $(`#${compSequence[i]}`)
       circle.addClass("click-bright-" + circle.attr("id"));
-      timeOut(i);
+
+      setTimeout(function(){
+        $(`#${compSequence[i]}`).removeClass("click-bright-" + $(`#${compSequence[i]}`).attr("id"));
+        if (i < compSequence.length) {
+          timeOut(i + 1);
+        }
+      },2000);
     }
+
+    timeOut(0);
+
+    // for (var i = 0; i < compSequence.length; i++) {
+    //   var circle = $(`#${compSequence[i]}`)
+    //   circle.addClass("click-bright-" + circle.attr("id"));
+    //   timeOut(i);
+    // }
  }
- 
+
   var compare = function() {
     for (var i = 0; i < compSequence.length; i++) {
       if (compSequence[i] !== userSequence[i]) {
@@ -33,9 +49,10 @@ $(document).ready(function(){
         return;
       }
     }
-      setTimeout(function() {
-        start();
-      },1500)
+
+    setTimeout(function() {
+      start();
+    },1500)
 
   }
 
