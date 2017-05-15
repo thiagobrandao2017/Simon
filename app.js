@@ -15,7 +15,7 @@ $(document).ready(function(){
       var circle = $(`#${compSequence[i]}`)
       circle.addClass("click-bright-" + circle.attr("id"));
         setTimeout(function(){
-          var circle = $(`#${compSequence[i]}`)
+          //var circle = $(`#${compSequence[i]}`)
           circle.removeClass("click-bright-" + circle.attr("id"));
           if (i < compSequence.length) {
             timeOut(i + 1);
