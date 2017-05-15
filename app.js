@@ -9,8 +9,7 @@ $(document).ready(function(){
     userSequence = [];
     var random = colors[Math.floor(Math.random() * 4)];
     compSequence.push(random);
-    console.log(compSequence);
-
+    //console.log(compSequence);
     var timeOut = function(i) {
       var circle = $(`#${compSequence[i]}`)
       circle.addClass("click-bright-" + circle.attr("id"));
@@ -22,8 +21,6 @@ $(document).ready(function(){
           }
       },850);
     }
-
-
     timeOut(0);
  }
 
@@ -55,7 +52,7 @@ $(document).ready(function(){
         compare();
       }, 1000);
     }
-    console.log(userSequence);;
+    //console.log(userSequence);;
   }
 
   $("#start").on("click", start);
